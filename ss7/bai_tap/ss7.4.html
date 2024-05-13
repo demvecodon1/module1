@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="chuvi">
+<button type="button" onclick="bank()"> bankinh</button>
+<p id="bank"></p>
+<script>
+    function bank() {
+        let a = +document.getElementById('chuvi').value
+        let c = 2
+        let b = 3.14
+        document.getElementById('bank').innerHTML = a * c * b
+    }
+</script>
+</body>
+</html>

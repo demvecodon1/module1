@@ -1,0 +1,48 @@
+
+PE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Máy Tính</h1>
+<input type="number" id="cong" placeholder="nhập số thứ nhất">
+<input type="number" id="tru" placeholder="nhập số thứ hai">
+<button onclick="sub()">trừ</button>
+<button onclick="add()">cộng</button>
+<h2>Result:</h2>
+<p id="tinh">đây là kết quả</p>
+<script>
+    function add() {
+        let a = parseInt(document.getElementById("cong").value);
+        let b = parseInt(document.getElementById("tru").value);
+        document.getElementById("tinh").innerHTML = a + b;
+    }
+    function sub() {
+        let a = parseInt(document.getElementById("cong").value);
+        let b = parseInt(document.getElementById("tru").value);
+        document.getElementById("tinh").innerHTML = a - b;
+    }
+</script>
+
+<h1>Máy Tính</h1>
+<input type="number" id="c" placeholder="nhập số thứ nhất">
+<input type="number" id="t" placeholder="nhập số thứ hai">
+<button onclick="add" ()>trừ</button>
+<button onclick="sub" ()>cộng</button>
+<h2>Result:</h2>
+<p id="tinh">đay là kết quả</p>
+<script>
+    function add() {
+        let a = parseInt(document.getElementById("c").value);
+        let b = parseInt(document.getElementById("t").value);
+        document.getElementById("tinh").innerHTML = a + b;
+    }
+
+    function sub() {
+        let a = parseInt(document.getElementById("c").value);
+        let b = parseInt(document.getElementById("t").value);
+        document.getElementById("tinh").innerHTML = a - b;
+    }
+</script>

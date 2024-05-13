@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="c">
+<button onclick="kiss()">nhập</button>
+<p id="hello"></p>
+<script>
+    function kiss() {
+        let a = parseInt(document.getElementById('c').value);
+        let b = (9 * a / 5) + 32;
+        document.getElementById("hello").innerHTML = a + b;
+    }
+</script>
+</body>
+</html>
