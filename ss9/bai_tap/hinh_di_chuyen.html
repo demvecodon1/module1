@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style="width: 50px"
+         id="bong"/>
+    <p>click</p>
+    <input type="button" value="clickme" onclick="phai()"></form>
+<script>
+    let kiss = null;
+    kiss = document.getElementById('bong');
+
+    function init() {
+        kiss = document.getElementById('bong');
+        kiss.style.position = 'relative';
+        kiss.style.left = '0px';
+    }
+
+    function phai() {
+        kiss.style.left = parseInt(kiss.style.left) + 10 + 'px';
+    }
+
+    window.onload = init;
+
+</script>
+
+</body>
+</html>

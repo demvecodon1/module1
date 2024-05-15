@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let soDien = +prompt('số điện')
+    let tien = 0;
+    if (soDien <= 100) {
+            tien = soDien * 1600;
+    }else if (soDien <= 500) {
+        tien = (soDien - 100) * 2000 + 160000;
+    }else {
+        tien = 160000 + 800000 + (soDien - 500) * 3500;
+    }
+    alert('số tiền điện phải trả là: ' + tien +'vnđ')
+</script>
 </body>
 </html>
+
+
+
+
+
+

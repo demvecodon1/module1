@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = parseInt(prompt('bài kiểm tra'))
+    let b = parseInt(prompt('bài giữa kì '))
+    let c = parseInt(prompt('bài cuối kì'))
+     let diem = (a + b*2 + c*3) / 6;
+        if (diem >= 8.5) {
+            alert('điểm giỏi');
+        }
+        else if (diem >= 7) {
+                alert('khá')
+        } else if (diem >= 5) {
+                alert('trung bình')
+        } else if (diem < 5) {
+                alert('yếu')
+        }
+</script>
+
 </body>
 </html>

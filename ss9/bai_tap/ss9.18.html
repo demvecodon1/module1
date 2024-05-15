@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = +prompt('lương cá nhân')
+    let b = 0
+    if (a <= 10000) {
+        b = a*0
+    } else if (a > 10001 && a < 50000) {
+        b = (a - 10000) * 0.05
+    } else if (a > 50001){
+        b = 5000 + (a - 50000) * 0.1
+    }
+    alert('Số tiền thuế cá nhân là: ' + b + ' VND');
+</script>
 </body>
 </html>
