@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum = 1
+    let a = 0;
+    let b = 1;
+
+    for (let i = 3; i <= 20; i++) {
+        let q = a + b;
+        sum += q;
+        a = b;
+        b = q;
+    }
+    console.log('tổng của 20 số là ', sum);
+
+
+</script>
+
+</body>
+</html>
