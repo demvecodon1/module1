@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 4, 12, -1, -5, -7, 11]
+    let b = +prompt('nhập vào')
+    vitri = -1
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === b) {
+            document.write(i)
+            vitri = i;
+        }
+
+    }
+    if (vitri == -1) {
+        document.write(vitri)
+    }
+</script>
+
+</body>
+</html>
