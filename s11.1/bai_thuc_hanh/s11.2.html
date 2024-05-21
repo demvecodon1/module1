@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <script>
+        let a = [-3, 5, 1, 3, 2, 10];
+        let b = +prompt('nhập số vào')
+        let vitri = -1
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === b) {
+                document.write(i)
+                vitri = i;
+            }
+        }
+        if (vitri == -1) {
+            document.write(vitri)
+            alert("không hiển thị");
+        }
+
+
+
+    </script>
+    </body>
+    </html>

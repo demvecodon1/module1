@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = +prompt('nhap số  thứ nhất')
+    let b = +prompt('nhap số  thứ hai')
+    let dem = 0
+    for (let i = 0; i <= b; i++) {
+        for (let j = 0; j <= b; j++) {
+            let k = s - i - j;
+            if (k >= 0 && k <= b){
+                dem++;
+            document.write(i + ',' + j+',' + k + '<br>');
+        }
+    }
+    }
+    document.write('dem')
+
+</script>
+</body>
+</html>
