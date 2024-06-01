@@ -1,0 +1,43 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Trang bắt đầu</title>
+            <style>
+                body {
+                    background-image: url(download.jpg);
+                    background-size: contain;
+                    text-align: center;
+                }
+                h1 {
+                    font-size: 56px;
+                    color: #333;
+                }
+                button {
+                    padding: 35px 42px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin: 20px;
+                    cursor: pointer;
+                    font-size: 24px;
+                    background-color: red;
+                    color: white;
+                    border-radius: 10px;
+                    border: none;
+                }
+                button:hover {
+                    background-color: chartreuse;
+                }
+            </style>
+        </head>
+        <body>
+        <h1>Chào mừng đến với trò chơi Đuổi Hình Bắt Chữ!</h1>
+        <button onclick="startGame()">Bắt đầu</button>
+        <script>
+            function startGame() {
+                window.location.href = "lam_game.html#question1";
+            }
+        </script>
+        </body>
+        </html>

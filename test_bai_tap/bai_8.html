@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập số nguyên tử');
+    let arr = new Array(a)
+    for (let i = 0; i < arr.length; i++) {
+        let b = +prompt('số nguyen tử :' + `${i}`)
+        arr[i] = b
+
+    }
+    alert('các số phần tử vừa nhập' + arr)
+    let max = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i < max])
+            max = arr[i]
+
+    }
+    alert('số nguyên tố lớn nhất trong mảng là ' + max)
+</script>
+
+</body>
+</html>

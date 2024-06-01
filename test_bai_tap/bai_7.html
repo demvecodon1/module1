@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập độ dài của mảng');
+    let arr = new Array();
+
+    for (let i = 0; i < a;) {
+        let nguyento = +prompt('Nhập vào số nhỏ hơn 100');
+        if (nguyento > 10 && nguyento < 100) {
+            arr.push(nguyento);
+            i++;
+        }
+    }
+
+    alert(arr);
+
+    let brr = [];
+
+    for (let i = 0; i < a; i++) {
+        let str = arr[i].toString();
+        if (str[0] < str[1]) {
+            brr.push(arr[i]);
+        }
+    }
+
+    alert(brr);
+</script>
+
+</body>
+</html>
