@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = ''
+    do {
+        n = +prompt("nhap do dai chan cua mang")
+    }
+    while (n > 20);
+    let arr = new Array(n)
+    for (let i = 0; i < arr.length; i++) {
+        let b = +prompt(`Nhap phan tu ${i} cua mang`)
+        arr[i]=b
+    }
+    alert('các số trong mảng là :' +arr )
+    let chan = 0;
+    let le = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            chan += arr[i];
+
+        } else {
+            le += arr[i];
+        }
+    }
+     let result = chan - le;
+    alert(`tổng các số chẵn lẻ trong mảng là: ${chan} - ${le} = ${result}`);
+</script>
+
+</body>
+</html>
