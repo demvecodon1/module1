@@ -5,42 +5,18 @@
     <title>chuyển đổi tiển tệ</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th><label for="Amount">Amount</label></th>
-        <th>từ tiền tệ</th>
-        <th>đến tiền tệ</th>
-        <th> </th>
-    </tr>
-    <td>
-        <input type="number" id="amount">
-    </td>
-    <td>
-        <select id="den">
-            <option value="1">đồng</option>
-            <option value="26000">usd</option>
-            <option value="163">yên</option>
-        </select>
-    </td>
-    <td>
-        <select id="to">
-            <option value="1">đồng</option>
-            <option value="26000">usd</option>
-            <option value="163">yên</option>
-        </select>
-    </td>
-    <td>
-        <button onclick="doi()"> chuyển thành</button>
-    </td>
-    </tr>
-</table>
-<p id="kiss"></p>
 <script>
-    function doi() {
-        let a = +document.getElementById('amount').value;
-        let b = +document.getElementById('den').value;
-        let c = +document.getElementById('to').value;
-        document.getElementById('kiss').innerHTML = a * c / b
+    let a = +prompt('nhập cạnh a')
+    let b = +prompt('nhập cạnh b')
+    let c= +prompt('nhập cạnh c')
+    if (a === b && a !== c) {
+        if (a * a + b * b === c * c || b * b + c * c === a * a || c * c + a * a === b * b) {
+            alert('Tam giác vuông cân');
+        } else {
+            alert('Tam giác cân nhưng không vuông cân');
+        }
+    } else {
+        alert('Không phải tam giác vuông cân');
     }
 </script>
 </body>
