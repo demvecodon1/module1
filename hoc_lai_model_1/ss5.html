@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let a = +prompt('nhập cạnh a')
-    let b = +prompt('nhập cạnh b')
-    let c= +prompt('nhập cạnh c')
+    let a = +prompt('nhập a');
+    let b = +prompt('nhập b')
+    let c = +prompt('nhập c')
     if (a === b && a !== c) {
-        if (a * a + b * b === c * c || b * b + c * c === a * a || c * c + a * a === b * b) {
-            alert('Tam giác vuông cân');
+        if ((a + b) * 2 === c * c || (b + c) * 2 === a * a || (c + a) * 2 === b * b) {
+            alert('là tam giác cân')
         } else {
-            alert('Tam giác cân nhưng không vuông cân');
+            alert('là tam giác vuông cân')
         }
     } else {
-        alert('Không phải tam giác vuông cân');
+        alert('không phải tam giác cân')
     }
 </script>
 </body>
