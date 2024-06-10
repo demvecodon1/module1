@@ -9,7 +9,7 @@
     let a = +prompt('nhập a');
     let b = +prompt('nhập b')
     let c = +prompt('nhập c')
-    if (a === b && a !== c) {
+    if ((a === b && a !== c) || (b === c && b !== a) || (c === a && c !== b)) {
         if ((a + b) * 2 === c * c || (b + c) * 2 === a * a || (c + a) * 2 === b * b) {
             alert('là tam giác cân')
         } else {
