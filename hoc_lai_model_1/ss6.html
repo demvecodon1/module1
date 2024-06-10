@@ -20,7 +20,7 @@
         let month = parseInt(document.getElementById("month").value);
         let year = parseInt(document.getElementById("year").value);
 
-        var resultDiv = document.getElementById("result");
+        let resultDiv = document.getElementById("result");
 
         if (isNaN(month) || isNaN(year) || month < 1 || month > 12 || year <= 0) {
             resultDiv.innerHTML = "Tháng hoặc năm không hợp lệ.";
