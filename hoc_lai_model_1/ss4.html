@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-
-    <h1>TIP CALCULATOR</h1>
-
+<div style=" background-color: #dddddd ; width: 300px ; padding: 50px">
+    <h1 style="background: cornflowerblue">TIP CALCULATOR</h1>
     <tr>
        <th>How much was your bill?</th></br>
         <td>$ <input type="number" id="tip"></td>
@@ -30,7 +28,7 @@
         </br>
         <th>How many people are sharing the bill?</th></br>
         <td>
-           <input type="number" id="songuoi">
+           <input type="number" id="people">
         </td>
     </tr>
     </br>
@@ -42,10 +40,11 @@
     function chia() {
         let a = +document.getElementById("tip").value;
         let b = +document.getElementById("tile").value;
-        let c = +document.getElementById("songuoi").value;
-        document.getElementById('tien').innerHTML=(a*b)/c
+        let c = +document.getElementById("people").value;
+        document.getElementById('tien').innerHTML=` số tiền tip nhận được là : ${(a*b)/c}`
 
     }
 </script>
+</div>
 </body>
 </html>
