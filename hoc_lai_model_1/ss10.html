@@ -7,10 +7,23 @@
 </head>
 <body>
 <script>
-    let n =+prompt('nhập vào');
-    for (let i = 0; i < n; i++); {
-        alert(` số bạn cần là ${n}`)
-    }
- </script>
+    let n;
+    let isprime = false;
+    while (!isprime) {
+        n = +prompt('nhập số nguyên dương')
+        if (Number.isInteger(n) && n > 1) {
+            isprime = true
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    isprime = false;
+                    break
+
+                }
+            }
+        } if (!isprime){
+            alert('không phải là số nguyên tố cần nhập lại!')
+        }
+    }alert(n+'là một số nguyên tố')
+</script>
 </body>
 </html>
