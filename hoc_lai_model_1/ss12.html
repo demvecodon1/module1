@@ -7,13 +7,13 @@
 <body>
 <script>
     let n = +prompt('vi tri so: ')
-    let a =[]
-    let arr=new Array(a)
-    let sum = 0
-    for (let i = 0; i<=n; i++) {
-        sum+=i
+    let sum = 50
+    for (let i = 1; i<=n; i++) {
+        if (i!=1){
+            sum+=i-1
+        }
     }
-    alert(` số nằm ở vị trí ${n} là:${50+sum}`)
+    alert(` số nằm ở vị trí ${n} là:${sum}`)
 
 </script>
 </body>
