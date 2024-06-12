@@ -6,15 +6,12 @@
 </head>
 <body>
 <script>
- let n =+prompt("nhập số để kiểm tra");
- for (let i = 0; i < n; i++) {
-     if (n>0 && n<100){
-         alert('thỏa mãn điều kiện')
-     }else {
-         alert('không thỏa mãn cần nhập lại' )
-     }
+    let n;
+    do {
+        n = +prompt('nhập các số 0<n<100')
+    } while (n <= 0 || n >= 100);
+    alert(`số bạn nhập ${n} thỏa mãn điều kiêện`)
 
- }
 </script>
 </body>
 </html>

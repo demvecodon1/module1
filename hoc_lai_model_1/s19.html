@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
 </head>
 <body>
 <script>
     function isprime(num) {
         if (num <= 1) {
-            return false
+            return false;
         }
         for (let i = 2; i < Math.sqrt(num); i++) {
             if (num % 1 === 0) {
-                return false
+                return false;
             }
 
         }
@@ -22,12 +20,13 @@
 
     let soNguyen;
     do {
-        soNguyen = +prompt('nhập số cần kiểm tra');
+        soNguyen = +prompt('nhập vào s cần kiểm tra');
         if (!isprime(soNguyen)) {
-            alert('không phải là số nguyên tố vui lòng nhập lại');
+            alert('số bạn nhập không phải là số nguyên.Vui lòng nhập lại');
         }
     } while (!isprime(soNguyen));
-    alert(`Số ${soNguyen} là một số nguyên tố`)
+    alert(` số bạn nhập ${soNguyen} là số nguyên`)
 </script>
+
 </body>
 </html>
