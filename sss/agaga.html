@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+ let a = +prompt('nhập số phần tử');
+ let arr =new Array(a)
+ for (let i = 0; i < arr.length; i++) {
+     let b =+prompt('các phần từ vừa nhập'+`${i}`)
+     arr[i]=b
+ }
+ alert('số các phần tử vừa nhập là:'+arr)
+ let chan = 0;
+ let le =0;
+ for (let i = 0; i < arr.length; i++) {
+     if (i%2===0) {
+         chan++
+     }else{
+         le++
+     }if (chan===le){
+         alert('no')
+         }else {
+         alert('yes')
+     }
+         }
+     
+ 
+
+
+
+</script>
+
 </body>
 </html>

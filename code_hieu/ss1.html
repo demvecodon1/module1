@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = +prompt('nhập số có trong mảng')
+    let arr = new Array(n)
+    for (let i = 0; i < arr.length; i++) {
+        let a = +prompt(` các sô lần lượt là ${i}`)
+        arr[i] = a
+    }
+    let chan = 0;
+    let le = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            chan++
+            alert('ok')
+        } else {
+            le++
+            alert('no')
+        }
+    }
+    alert(` các số lần lượt trong mảng là ${arr}`)
+</script>
+
 </body>
 </html>

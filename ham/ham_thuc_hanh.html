@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<span>nhiệt độ F:</span><input id="nhietdof" type="number"placeholder="nhiệt độ F"
+      oninput="chuyendoinhietdo(this.value)"
+      onchange="chuyendoinhietdo(this.value)">
+<p>nhiệt độ C:</p><span id="doc"></span>
+<script>
+    function chuyendoinhietdo(valnum) {
+        document.getElementById('doc').innerHTML= (valnum-32)/1.8;
+
+    }
+
+</script>
 </body>
 </html>

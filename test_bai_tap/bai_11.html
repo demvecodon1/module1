@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   function checkarr(num) {
+       return Math.sqrt(num)%1===0
+   }
+   let n=+prompt('độ dài phần tử')
+   let arr= new Array(n)
+   for (let i = 0; i < arr.length; i++) {
+       let a =+prompt(` các phần tử lần lượt trong mảng là : ${i+1}`)
+        arr[i]=a
+
+   }alert(`các phần tử được thêm vào mảng ${arr}`)
+   let b=[]
+   for (let i = 0; i < arr.length; i++) {
+       if (checkarr(arr[i])){
+           b.push(arr[i])
+       }
+
+   }alert(` các số chính phương trong mảng là:${b}`)
+
+</script>
+
 </body>
 </html>

@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = +prompt('số nguyên tố của mảng :')
+    let arr = new Array(n)
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        let a = +prompt('cá số nguyên tố nhập vào là:' + `${i}`)
+        arr[i] = a;
+        sum += a;
+
+    }
+    alert('các số nguyên tố vừa nhập là:' + arr)
+    let avr = sum / arr.length
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === avr) {
+            count++
+        }
+    }alert('số lượng nguyên tố bằng trung bình của mảng là:' + count)
+
+
+</script>
+
 </body>
 </html>

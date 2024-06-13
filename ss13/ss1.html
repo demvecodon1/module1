@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class temperature{
+        constructor(doC) {
+            this.doC=doC
+
+    }
+    tof (){
+       return 9/5 * this.doC + 32;
+    }tok(){
+            return this.doC+273
+
+    }
+    }
+    let t1= new temperature(20);
+    alert(t1.tof())
+    alert(t1.tok())
+
+</script>
 </body>
 </html>

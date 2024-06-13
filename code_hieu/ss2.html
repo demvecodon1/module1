@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  function checkArray(arr) {
+      let a = true
+      for (let i = 0; i < arr.length/2; i++) {
+        if (arr[i]* arr[i] / arr[arr.length/2+i]){
+            a=true
+        }else {
+            a = false
+            return a
+        }
+
+      }return a
+
+  }
+  let arr=[2,4,6,4,16,36]
+  let a = checkArray(arr)
+  alert(a)
+</script>
+
 </body>
 </html>

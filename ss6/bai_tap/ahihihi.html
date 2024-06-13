@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-$END$
+<input type="text" id="input1" placeholder="Nhập giá trị thứ nhất">
+<input type="text" id="input2" placeholder="Nhập giá trị thứ hai">
+<button  onclick="printValues()">In giá trị</button>
+<h1 id="a"></h1>
+</body>
+<script>
+    function printValues() {
+        var value1 = document.getElementById('input1').value;
+        var value2 = document.getElementById('input2').value;
+        var value3 = value1 * value2;
+        document.getElementById('a').innerHTML = `${value1} * ${value2} = ${value3}`
+        document.getElementById('input1').value = '';
+        document.getElementById('input2').value = '';
+    }
+</script>
+</html>
+
+
+
+
+
+
+
+
+</script>
+    
+
+
+
 </body>
 </html>

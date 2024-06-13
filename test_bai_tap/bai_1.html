@@ -6,28 +6,27 @@
 </head>
 <body>
 <script>
-   let a = +prompt('nhập số phần tử')
-   let arr = new Array(a)
-   for (let i = 0; i < arr.length;i++) {
-       let b = +prompt('số phần tử thứ:'+`${i}`)
-       arr[i]=b
-   }
-   alert('các phần tử vừa nhập'+arr)
-   let chan = 0;
-   let le=0
-   for (let i = 0; i <arr.length ; i++) {
-       if (arr[i]%2 === 0){
-           chan++
-       }else {
-           le++
-       }
-       if (chan=== le){
-           alert('ok')
+    let a =+prompt('số trong mảng là:')
+    let arr= new Array(a)
+    for (let i = 0; i < arr.length; i++) {
+        let b =('các số nguyên tố là :'+`${i}` )
+        arr[i]=b
+    }alert('các số vừa nhập lần  lượt là :'+arr)
+    let chan= 0
+    let le= 0
+    for (let i = 0; i < arr.length; i++) {
+      if (i%2===0){
+          chan++
+      }else {
+          le++
+      }if (chan===le){
+          alert('ok')
 
-       }else {
-           alert('no')
-       }
-   }
+        }else {
+          alert('no')
+        }
+
+    }
 </script>
 </body>
 </html>

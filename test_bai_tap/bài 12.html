@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function isprime(num) {
+        if (num <= 1) return false;
+        if (num <= 3) return true;
+
+        if (num % 2 === 0 || num % 3 === 0) return false;
+
+        for (let i = 5; i * i <= num; i += 6) {
+            if (num % i === 0 || num % (i + 2) === 0) return false;
+        }
+
+        return true;
+    }
+
+    let n = +prompt('nhập vào số nguyên tử:')
+    let arr = new Array(n)
+    for (let i = 0; i < arr.length; i++) {
+        let a = +prompt('các số nguyên tử vừa nhập vào:' + `${i}`)
+        arr[i] = a
+    }
+    alert('các số nguyên tử lần lượt là :' + arr)
+    let game = true;
+    for (let i = 0; i < arr.length; i++) {
+        if (!isFinite(arr[i])) {
+            game = false
+            break;
+        }
+
+    }
+    if (game) {
+        alert('ok');
+    } else {
+        ('no');
+    }
+</script>
+
 </body>
 </html>

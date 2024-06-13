@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
-<body>
-$END$
+<body><script>
+    module.exports = {
+        maxMinAvg
+    };
+
+    function maxMinAvg(arr) {
+        let arrnew=[];
+        let max= [0];
+        let min=[0];
+        let avg=0;
+        for (let i = 0; i < arr.length ; i++){
+            if (arr[i] > max){
+                max = arr[i]
+            }
+        }arrnew.push(max)
+
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i] < min){
+                min = arr[i]
+            }
+        }arrnew.push(min)
+
+        let sum = 0
+        for(let i = 0 ; i < arr[i]; i++){
+            sum = arr[i]
+            avg = sum/arr.length
+        }
+        arrnew.push(avg)
+        return arrnew;
+    }   
+}</script>
 </body>
 </html>

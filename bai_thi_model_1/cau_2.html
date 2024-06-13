@@ -6,28 +6,23 @@
 </head>
 <body>
 <script>
-    function checkString(str) {
-        let n = str.length
-        let hoa = 0
-        let thuong = 0
-        let UPPER = "QWERTYUIOPLKJHGFDSAZXCVBNM"
-        let lower = "qwertyuioplkjhgfdsazxcvbnm"
-        for (let i = 0; i < str.length; i++) {
-            if (UPPER.indexOf(str[i]) !== -1)
-            {hoa++}
-            else {
-                thuong++
+    function countUpperCaseChars(str) {
+        var count = 0;
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] >= 'A' && str[i] <= 'Z') {
+                count++;
             }
         }
-        alert(hoa)
-        alert(thuong)
+        if (count > 0) {
+            return count;
+        } else {
+            return "The string does not contain uppercase characters.";
+        }
     }
-    let str = "MatTroi"
-    let check = checkString(str)
-</script>
+    var result1 = countUpperCaseChars("Hello World"); // returns 2
+    var result2 = countUpperCaseChars("hello world");
+    alert('các chữ'+result2)
 
-</body>
-</html>
 </script>
 
 </body>

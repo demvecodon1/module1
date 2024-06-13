@@ -5,8 +5,8 @@
     <title>Đuổi Hình Bắt Chữ</title>
     <style>
         body {
-            background-image: url(download.jpg);
-            background-size: auto;
+            background-image: url(anh11.jpg);
+            background-size: cover;
             text-align: center;
         }
         h1 {
@@ -39,138 +39,102 @@
             margin: 0 auto;
         }
     </style>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Đuổi Hình Bắt Chữ</title>
-        <style>
-            body {
-                background-image: url(download.jpg);
-                background-size: auto;
-                text-align: center;
-            }
-            h1 {
-                font-size: 50px;
-                text-align: center;
-                background-color: white;
-                color: #58257b;
-                text-shadow: 5px 5px violet;
-            }
-            button {
-                padding: 25px 42px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                margin: 0 auto;
-                cursor: pointer;
-                font-size: 30px;
-                background-color: yellow;
-                color: black;
-                border-radius: 30px;
-            }
-            .word {
-                margin-top: 20px;
-                font-size:16px;
-            }
-            .guess-input {
-                margin-top: 30px;
-                font-size: 14px;
-            }
-        </style>
-    </head>
-    <body>
-    <h1> Đuổi Hình Bắt Chữ</h1>
-    <img src="cau-1.webp" alt="Hình ảnh" id="image">
-    <audio src="nhac.mp3"  autoplay loop></audio>
-    <div class="word">________</div>
-    <div class="guess-input">
-        <input type="text"  id="guess" style="font-size: xx-large" placeholder="Nhập từ">
-        <button onclick="checkGuess()">Kiểm tra</button>
-    </div>
-    <div id="result"></div>
-    <button id="score" style="font-size: x-large" >Điểm: 0</button>
-    <script>
-        const questions = [
-            { image: "cau-1.webp", answer: "phú yên"},
-            { image: "cau-2.webp", answer: "tiền giang"},
-            { image: "cau-3.webp", answer: "nam định"},
-            { image: "cau-4.webp", answer: "chọi dế" },
-            { image: "cau-5.jpg", answer: "bạc tình"},
-            { image: "cau-6.jpg", answer: "bánh bò"},
-            { image: "cau-7.jpg", answer: "hài lòng"},
-            { image: "cau-8.jpg", answer: "giận cá chém thớt"},
-            { image: "cau-9.jpg", answer: "lục lạc" },
-            { image: "cau-10.jpg", answer: "ba trợn" },
-        ];
-        let currentQuestionIndex = 0;
-        let guessedWord = "_".repeat(questions[currentQuestionIndex].answer.length);
-        let score = 0;
-        let wrongGuessCount = 0;
-        let highScore = localStorage.getItem("highScore");
-        if (!highScore) {
-            highScore = 0;
-        } else {
-            highScore = parseInt(highScore);
-        }
+</head>
+<body>
+<h1> Đuổi Hình Bắt Chữ</h1>
+<img src="cau-1.webp" alt="Hình ảnh" id="image">
+<audio src="nhac.mp3"  autoplay loop></audio>
+<div class="word">________</div>
+<div class="guess-input">
+    <input type="text"  id="guess" style="font-size: xx-large" placeholder="Nhập từ">
+    <button onclick="checkGuess()">Kiểm tra</button>
+</div>
+<div id="result"></div>
+<button id="score" style="font-size: x-large" >Điểm: 0</button>
+<div id="high-score" style="font-size: x-large">Điểm cao nhất: 0</div>
 
-        function displayGuessedWord() {
-            document.querySelector('.word').textContent = guessedWord;
-        }
+<script>
+    const questions = [
+        { image: "cau-1.webp", answer: "phú yên"},
+        { image: "cau-2.webp", answer: "tiền giang"},
+        { image: "cau-3.webp", answer: "nam định"},
+        { image: "cau-4.jpg", answer: "cơm gà hội an" },
+        { image: "cau-6.jpg", answer: "bánh bò"},
+        { image: "cau-5.jpg", answer: "bạc tình"},
+        { image: "cau-7.jpg", answer: "hài lòng"},
+        { image: "cau-8.jpg", answer: "giận cá chém thớt"},
+        { image: "cau-9.jpg", answer: "lục lạc" },
+        { image: "cau-10.jpg", answer: "ba trợn" },
+    ];
+    let currentQuestionIndex = 0;
+    let guessedWord = "_".repeat(questions[currentQuestionIndex].answer.length);
+    let score = 0;
+    let wrongGuessCount = 0;
+    let highScore = localStorage.getItem("highScore");
+    if (!highScore) {
+        highScore = 0;
+    } else {
+        highScore = parseInt(highScore);
+    }
 
-        function updateScore() {
-            score += 10;
-            document.getElementById('score').textContent = `Điểm: ${score}`;
-        }
+    function displayGuessedWord() {
+        document.querySelector('.word').textContent = guessedWord;
+    }
 
-        function resetGame() {
-            currentQuestionIndex = 0;
-            score = 0;
-            guessedWord = "_".repeat(questions[currentQuestionIndex].answer.length);
-            displayGuessedWord();
-            document.getElementById('score').textContent = `Điểm: ${score}`;
-            document.getElementById('image').src = questions[currentQuestionIndex].image;
-            document.getElementById('guess').value = '';
-            document.getElementById('result').textContent = '';
-            wrongGuessCount = 0;
-        }
+    function updateScore() {
+        score += 10;
+        document.getElementById('score').textContent = `Điểm: ${score}`;
+    }
 
-        function checkGuess() {
-            const guess = document.getElementById('guess').value.toLowerCase();
-            const correctAnswer = questions[currentQuestionIndex].answer;
-
-            if (guess === correctAnswer) {
-                updateScore();
-                guessedWord = correctAnswer;
-                displayGuessedWord();
-                document.getElementById('result').textContent = 'Đúng!';
-                document.getElementById('guess').value = '';
-                currentQuestionIndex++;
-                if (currentQuestionIndex < questions.length) {
-                    guessedWord = "_".repeat(questions[currentQuestionIndex].answer.length);
-                    displayGuessedWord();
-                    document.getElementById('result').textContent = '';
-                    document.getElementById('image').src = questions[currentQuestionIndex].image;
-                } else {
-                    if (score > highScore) {
-                        highScore = score;
-                        localStorage.setItem("highScore", highScore);
-                    }
-                    alert('định mệnh bạn giỏi quá z !\nĐiểm cao nhất của bạn: ' + highScore);
-                    resetGame();
-                }
-            } else {
-                wrongGuessCount++;
-                if (wrongGuessCount === 5) {
-                    alert('đần. Kết thúc trò chơi!');
-                    resetGame();
-                } else {
-                    document.getElementById('result').textContent = 'sai rồi kìa suy nghỉ lại đi' ;
-                    document.getElementById('result').classList.add('wrong-result');
-                }
-            }
-        }
+    function resetGame() {
+        currentQuestionIndex = 0;õ
+        score = 0;
+        guessedWord = "_".repeat(questions[currentQuestionIndex].answer.length);
         displayGuessedWord();
-    </script>
-    </body>
-    </html>
+        document.getElementById('score').textContent = `Điểm: ${score}`;
+        document.getElementById('image').src = questions[currentQuestionIndex].image;
+        document.getElementById('guess').value = '';
+        document.getElementById('result').textContent = '';
+        wrongGuessCount = 0;
+        document.getElementById('high-score').textContent = `Điểm cao nhất: ${highScore}`;
+    }
+
+    function checkGuess() {
+        const guess = document.getElementById('guess').value.toLowerCase();
+        const correctAnswer = questions[currentQuestionIndex].answer;
+
+        if (guess === correctAnswer) {
+            updateScore();
+            guessedWord = correctAnswer;
+            displayGuessedWord();
+            document.getElementById('result').textContent = 'Đúng!';
+            document.getElementById('guess').value = '';
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                guessedWord = "_".repeat(questions[currentQuestionIndex].answer.length);
+                displayGuessedWord();
+                document.getElementById('result').textContent = '';
+                document.getElementById('image').src = questions[currentQuestionIndex].image;
+            } else {
+                if (score > highScore) {
+                    highScore = score;
+                    localStorage.setItem("highScore", highScore);
+                }
+                alert('định mệnh bạn giỏi quá z !\nĐiểm cao nhất của bạn: ' + highScore);
+                resetGame();
+            }
+        } else {
+            wrongGuessCount++;
+            if (wrongGuessCount === 5) {
+                alert('đần. Kết thúc trò chơi!');
+                resetGame();
+            } else {
+                document.getElementById('result').textContent = 'sai rồi kìa suy nghỉ lại đi' ;
+                document.getElementById('result').classList.add('wrong-result');
+            }
+        }
+    }
+    displayGuessedWord();
+</script>
+</body>
+</html>

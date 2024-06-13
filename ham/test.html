@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    function processConfirm(vao) {
+        let go = "";
+        if (vao) {
+            go = 'chắc chắn rồi';
+        } else {
+            go = 'bận chơi game r'
+
+        }
+        return go
+    }
+
+    let rck = confirm('nay có làm bài tập không')
+    let rkc = confirm(processConfirm(rck))
+    alert(rkc)
+</script>
 </body>
 </html>

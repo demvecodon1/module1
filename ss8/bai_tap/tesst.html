@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Leap year</title>
 </head>
 <body>
-$END$
+<script>
+    let nam = parseInt(prompt("Enter a year"));
+    if (nam % 4 === 0) {
+        if (nam % 100 === 0) {
+            if (nam % 400 === 0) {
+                alert(nam + "la nam nhuan");
+            } else {
+                alert(nam + "ko phai nam nhuan");
+            }
+        } else {
+            alert(nam + "la nam nhuan");
+        }
+    } else {
+        alert(nam + "ko phai nam nhuan");
+    }
+</script>
 </body>
 </html>

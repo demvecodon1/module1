@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+
+    <
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div id="gameArea" style="position: relative; width: 500px; height: 500px; border: 1px solid black;">
+    <img src="hinh-nen-anime-1.jpg" alt="" style="width: 100px; position: absolute; top: 100px; left: 100px;" id="player">
+    <img src="22.jpg" alt="" style="width: 50px; position: absolute; top: 200px; left: 200px;" id="ball">
+</div>
+
+<script>
+
+    let player = document.getElementById('player');
+    let ball = document.getElementById('ball');
+    let playerX = 100;
+    let playerY = 100;
+    let ballX = 200;
+    let ballY = 200;
+    let ballSpeedX = 1;
+    let ballSpeedY = 2;
+
+    setInterval(() => {
+        // Di chuyển người chơi
+        player.style.left = playerX + 'px';
+        player.style.top = playerY + 'px';
+
+        // Di chuyển quả bóng
+        ballX += ballSpeedX;
+        ballY += ballSpeedY;
+        ball.style.left = ballX + 'px';
+        ball.style.top = ballY + 'px';
+
+        // Kiểm tra va chạm với biên trái và phải của cửa sổ
+        if (ballX <= 0 || ballX >= 500 - 50) {
+            ballSpeedX = -ballSpeedX;
+        }
+
+        // Kiểm tra va chạm với biên trên và dưới của cửa sổ
+        if (ballY <= 0 || ballY >= 500 - 50) {
+            ballSpeedY = -ballSpeedY;
+        }
+
+        // Kiểm tra va chạm giữa quả bóng và người chơi
+        if (ballX + 50 >= playerX && ballX <= playerX + 100 && ballY + 50 >= playerY && ballY <= playerY + 100) {
+            // Đảo ngược hướng di chuyển của quả bóng khi va chạm với người chơi
+            ballSpeedX = +ballSpeedX;
+            ballSpeedY = -ballSpeedY;
+
+            // Di chuyển quả bóng ra xa khỏi người chơi để tránh va chạm liên tục
+            ballX += ballSpeedX * 2;
+            ballY += ballSpeedY * 2;
+        }
+    }, 10);
+
+    // Xử lý sự kiện khi nhấn các phím mũi tên
+    window.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') {
+            playerX -= 5;
+        }
+        if (e.key === 'ArrowRight') {
+            playerX += 5;
+        }
+        if (e.key === 'ArrowUp') {
+            playerY -= 5;
+        }
+        if (e.key === 'ArrowDown') {
+            playerY += 5;
+        }
+    })
+</script>
 </body>
+
+
 </html>

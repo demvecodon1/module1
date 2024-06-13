@@ -3,18 +3,17 @@
 <body>
 
 <script>
-    var num = window.prompt();
-    var str = num.toString();
-    var result = [str[0]];
+    let numbers = [1, 2, 5, 7, 9, 11, 15, 22, 24, 35];
+    let count = 0;
 
-    for (var x = 1; x < str.length; x++) {
-        if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
-            result.push('-', str[x]);
-        } else {
-            result.push(str[x]);
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] >= 10) {
+            count++;
         }
     }
-    console.log(result.join(''));
+
+    document.write("Số lượng số nguyên lớn hơn hoặc bằng 10 trong mảng là: " + count);
+</script>
 </script>
 </body>
 </html>
